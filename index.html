@@ -7,29 +7,41 @@
 
 </head>
 <body>
+	<header>
+	<style>
+		.card{color: black}
+		header{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+}
+	</style>
 	<div class="container">
 <div class="card">
-  <div class="card-header text-center">Header</div>
+  <div class="card-header text-center bg-danger">BMI Calculator</div>
   <div class="card-body">
   	<form class="a w-50 m-auto" onsubmit="return false">
   		<div class="form-group">
   			<label>Weight</label>
-  			<input type="text" name="" placeholder="Weight In KG" required id="weight" class="form-control">
+  			<input type="text" name="" placeholder="Weight In KG" required id="weight" class="form-control text-center">
   		</div>
   		<div class="form-group">
   			<label>Height</label>
-  			<input type="text" name="" placeholder="Height In FT" required id="height" class="form-control">
+  			<input type="text" name="" placeholder="Height In FT" required id="height" class="form-control text-center">
   		</div>
   		<div class="form-group">
   			<label>BMI Value</label>
-  			<input type="number" name="" id="showvalue" class="form-control">
+  			<input type="number" name="" id="showvalue" class="form-control text-center">
   		</div>
   		<button class="btn btn-success" onclick="bmivalue()" type="submit" >Check BMI</button>
   	</form>
   </div>
-  <div class="card-footer text-center">A Healthy BMI Range Between 19 and 25. </div>
+  <div class="card-footer text-center bg-danger">A Healthy BMI Range Between 19 and 25. </div>
 </div>
 </div>
+</header>
 <script>
 	function bmivalue(){
 		var weight= document.getElementById('weight').value;
